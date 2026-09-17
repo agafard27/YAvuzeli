@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: yavuzeli-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: yavuzeli
+      POSTGRES_PASSWORD: yavuzeli_pwd
+      POSTGRES_DB: yavuzeli_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: yavuzeli-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+
+volumes:
+  pgdata:

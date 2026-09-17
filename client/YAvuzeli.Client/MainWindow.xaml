@@ -1,0 +1,30 @@
+<Window x:Class="YAvuzeli.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="YAvuzeli - Demo" Height="600" Width="1000">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Dosya">
+                <MenuItem Header="Çıkış"/>
+            </MenuItem>
+            <MenuItem Header="Görünüm">
+                <MenuItem Header="Dashboard" Command="{x:Static ApplicationCommands.Open}"/>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel DockPanel.Dock="Left" Width="180" Background="#EEE">
+            <TextBlock Margin="10" FontWeight="Bold">Menü</TextBlock>
+            <Button Margin="6" Command="{Binding ShowDashboardCommand}">Dashboard</Button>
+            <Button Margin="6" Command="{Binding ShowStudentsCommand}">Öğrenciler</Button>
+            <Button Margin="6" Command="{Binding ShowTeachersCommand}">Öğretmenler</Button>
+            <Button Margin="6" Command="{Binding ShowCoursesCommand}">Dersler</Button>
+            <Button Margin="6" Command="{Binding ShowScheduleCommand}">Program</Button>
+            <Button Margin="6" Command="{Binding ShowAttendanceCommand}">Yoklama</Button>
+            <Button Margin="6" Command="{Binding ShowPaymentsCommand}">Ödemeler</Button>
+            <Button Margin="6" Command="{Binding ShowReportsCommand}">Raporlar</Button>
+            <Button Margin="6" Command="{Binding ShowSettingsCommand}">Ayarlar</Button>
+        </StackPanel>
+
+        <ContentControl Content="{Binding CurrentView}" Margin="10"/>
+    </DockPanel>
+</Window>

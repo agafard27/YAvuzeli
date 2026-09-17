@@ -1,0 +1,11 @@
+c:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\bin\Debug\net8.0\YAvuzeli.Shared.deps.json
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\bin\Debug\net8.0\YAvuzeli.Shared.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\bin\Debug\net8.0\YAvuzeli.Shared.pdb
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\YAvuzeli.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\YAvuzeli.Shared.AssemblyInfoInputs.cache
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\YAvuzeli.Shared.AssemblyInfo.cs
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\YAvuzeli.Shared.csproj.CoreCompileInputs.cache
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\YAvuzeli.Shared.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\refint\YAvuzeli.Shared.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\YAvuzeli.Shared.pdb
+c:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Shared\obj\Debug\net8.0\ref\YAvuzeli.Shared.dll

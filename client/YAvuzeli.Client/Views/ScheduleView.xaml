@@ -1,0 +1,10 @@
+<UserControl x:Class="YAvuzeli.Client.Views.ScheduleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Program" FontSize="18" FontWeight="Bold" Margin="6"/>
+            <TextBlock Margin="6">Takvim görünümü (ileride takvim kontrolü entegre edilecek)</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

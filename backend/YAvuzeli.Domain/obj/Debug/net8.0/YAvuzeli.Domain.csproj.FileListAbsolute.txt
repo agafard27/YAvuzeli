@@ -1,0 +1,11 @@
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\bin\Debug\net8.0\YAvuzeli.Domain.deps.json
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\bin\Debug\net8.0\YAvuzeli.Domain.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\bin\Debug\net8.0\YAvuzeli.Domain.pdb
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.AssemblyInfoInputs.cache
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.AssemblyInfo.cs
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.csproj.CoreCompileInputs.cache
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\refint\YAvuzeli.Domain.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.pdb
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\ref\YAvuzeli.Domain.dll

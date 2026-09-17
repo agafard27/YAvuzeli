@@ -1,0 +1,10 @@
+<UserControl x:Class="YAvuzeli.Client.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel Margin="6">
+            <TextBlock Text="Ayarlar" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Margin="6">Yedekleme &amp; Kullanıcı Yönetimi gibi genel ayarlar burada.</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "backend", "{939DA091-C732-4437-9802-46AB0B027253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAvuzeli.API", "backend\YAvuzeli.API\YAvuzeli.API.csproj", "{8F0A2505-EC64-43B2-9660-933CD04A35F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAvuzeli.Domain", "backend\YAvuzeli.Domain\YAvuzeli.Domain.csproj", "{06633DA0-3127-4155-910F-671542F4E09A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAvuzeli.Application", "backend\YAvuzeli.Application\YAvuzeli.Application.csproj", "{72CAB320-AA15-4976-BB13-08F203AD7344}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAvuzeli.Infrastructure", "backend\YAvuzeli.Infrastructure\YAvuzeli.Infrastructure.csproj", "{2DC330EC-A11E-4781-BFDD-D0B3CDE67EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAvuzeli.Shared", "backend\YAvuzeli.Shared\YAvuzeli.Shared.csproj", "{75C84618-1478-4078-AC8E-EBBA1B7670D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "client", "{82711386-20EB-420F-8096-5753DB2AAA2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAvuzeli.Client", "client\YAvuzeli.Client\YAvuzeli.Client.csproj", "{48DA7299-202B-4F3C-99A6-14BB42970983}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F0A2505-EC64-43B2-9660-933CD04A35F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0A2505-EC64-43B2-9660-933CD04A35F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0A2505-EC64-43B2-9660-933CD04A35F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0A2505-EC64-43B2-9660-933CD04A35F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06633DA0-3127-4155-910F-671542F4E09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06633DA0-3127-4155-910F-671542F4E09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06633DA0-3127-4155-910F-671542F4E09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06633DA0-3127-4155-910F-671542F4E09A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72CAB320-AA15-4976-BB13-08F203AD7344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72CAB320-AA15-4976-BB13-08F203AD7344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72CAB320-AA15-4976-BB13-08F203AD7344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72CAB320-AA15-4976-BB13-08F203AD7344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC330EC-A11E-4781-BFDD-D0B3CDE67EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC330EC-A11E-4781-BFDD-D0B3CDE67EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC330EC-A11E-4781-BFDD-D0B3CDE67EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC330EC-A11E-4781-BFDD-D0B3CDE67EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C84618-1478-4078-AC8E-EBBA1B7670D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C84618-1478-4078-AC8E-EBBA1B7670D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C84618-1478-4078-AC8E-EBBA1B7670D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C84618-1478-4078-AC8E-EBBA1B7670D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48DA7299-202B-4F3C-99A6-14BB42970983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DA7299-202B-4F3C-99A6-14BB42970983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DA7299-202B-4F3C-99A6-14BB42970983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DA7299-202B-4F3C-99A6-14BB42970983}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F0A2505-EC64-43B2-9660-933CD04A35F5} = {939DA091-C732-4437-9802-46AB0B027253}
+		{06633DA0-3127-4155-910F-671542F4E09A} = {939DA091-C732-4437-9802-46AB0B027253}
+		{72CAB320-AA15-4976-BB13-08F203AD7344} = {939DA091-C732-4437-9802-46AB0B027253}
+		{2DC330EC-A11E-4781-BFDD-D0B3CDE67EA0} = {939DA091-C732-4437-9802-46AB0B027253}
+		{75C84618-1478-4078-AC8E-EBBA1B7670D4} = {939DA091-C732-4437-9802-46AB0B027253}
+		{48DA7299-202B-4F3C-99A6-14BB42970983} = {82711386-20EB-420F-8096-5753DB2AAA2A}
+	EndGlobalSection
+EndGlobal
