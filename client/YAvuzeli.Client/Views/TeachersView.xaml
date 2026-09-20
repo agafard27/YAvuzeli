@@ -29,6 +29,7 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Ad" Binding="{Binding FirstName}" Width="*"/>
                             <DataGridTextColumn Header="Soyad" Binding="{Binding LastName}" Width="*"/>
+                            <DataGridTextColumn Header="Branş" Binding="{Binding Branch}" Width="*"/>
                             <DataGridTextColumn Header="Telefon" Binding="{Binding Phone}" Width="130"/>
                             <DataGridTextColumn Header="E-posta" Binding="{Binding Email}" Width="180"/>
                             <DataGridCheckBoxColumn Header="Aktif" Binding="{Binding IsActive}" Width="60"/>
@@ -43,6 +44,8 @@
                     <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Padding="8"/>
                     <TextBlock Text="Soyad *" Margin="0,12,0,4"/>
                     <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Padding="8"/>
+                    <TextBlock Text="Branş *" Margin="0,12,0,4"/>
+                    <TextBox Text="{Binding Branch, UpdateSourceTrigger=PropertyChanged}" Padding="8"/>
                     <TextBlock Text="Telefon" Margin="0,12,0,4"/>
                     <TextBox Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}" Padding="8"/>
                     <TextBlock Text="E-posta" Margin="0,12,0,4"/>

@@ -74,8 +74,8 @@
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="22"/>
-                <ColumnDefinition Width="330"/>
+                <ColumnDefinition Width="18"/>
+                <ColumnDefinition Width="420"/>
             </Grid.ColumnDefinitions>
 
             <Border Background="White" CornerRadius="8" BorderBrush="{StaticResource LineBrush}" BorderThickness="1" Padding="18">
@@ -136,32 +136,77 @@
             </Border>
 
             <Border Grid.Column="2" Background="White" CornerRadius="8" BorderBrush="{StaticResource LineBrush}" BorderThickness="1" Padding="20">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <StackPanel IsEnabled="{Binding IsReady}">
+                <Grid IsEnabled="{Binding IsReady}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
                         <TextBlock Text="{Binding EditorTitle}" FontSize="19" FontWeight="SemiBold" Foreground="{StaticResource TextMainBrush}"/>
-                        <TextBlock Text="Zorunlu alanlar yıldız ile işaretlidir." Foreground="{StaticResource TextMutedBrush}" Margin="0,4,0,18"/>
-
-                        <TextBlock Text="Ad *" Foreground="{StaticResource TextMainBrush}"/>
-                        <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" MaxLength="100" AutomationProperties.Name="Ad"/>
-
-                        <TextBlock Text="Soyad *" Foreground="{StaticResource TextMainBrush}"/>
-                        <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" MaxLength="100" AutomationProperties.Name="Soyad"/>
-
-                        <TextBlock Text="Doğum tarihi *" Foreground="{StaticResource TextMainBrush}"/>
-                        <DatePicker SelectedDate="{Binding BirthDate}" SelectedDateFormat="Short" Margin="0,5,0,13" AutomationProperties.Name="Doğum tarihi"/>
-
-                        <TextBlock Text="Telefon" Foreground="{StaticResource TextMainBrush}"/>
-                        <TextBox Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}" MaxLength="30" AutomationProperties.Name="Telefon"/>
-
-                        <TextBlock Text="E-posta" Foreground="{StaticResource TextMainBrush}"/>
-                        <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" MaxLength="200" AutomationProperties.Name="E-posta"/>
-
-                        <CheckBox Content="Aktif öğrenci" IsChecked="{Binding IsActive}" Margin="0,2,0,20"/>
-
-                        <Button Content="{Binding SaveLabel}" Command="{Binding SaveCommand}" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,0,9"/>
-                        <Button Content="Yeni öğrenci / Formu temizle" Command="{Binding NewCommand}" Margin="0"/>
+                        <TextBlock Text="Zorunlu alanlar yıldız ile işaretlidir." Foreground="{StaticResource TextMutedBrush}" Margin="0,4,0,14"/>
                     </StackPanel>
-                </ScrollViewer>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="0,0,8,0">
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="12"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel>
+                                    <TextBlock Text="Ad *" Foreground="{StaticResource TextMainBrush}"/>
+                                    <TextBox Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" MaxLength="100" AutomationProperties.Name="Ad"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="Soyad *" Foreground="{StaticResource TextMainBrush}"/>
+                                    <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" MaxLength="100" AutomationProperties.Name="Soyad"/>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Margin="0,2,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="12"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel>
+                                    <TextBlock Text="Doğum tarihi *" Foreground="{StaticResource TextMainBrush}"/>
+                                    <DatePicker SelectedDate="{Binding BirthDate}"
+                                                SelectedDateFormat="Short"
+                                                MinHeight="37"
+                                                Margin="0,5,0,13"
+                                                AutomationProperties.Name="Doğum tarihi"/>
+                                </StackPanel>
+
+                                <Border Grid.Column="2" Background="#F8FAFC" BorderBrush="{StaticResource LineBrush}" BorderThickness="1" CornerRadius="6" Padding="12,9" Margin="0,18,0,13">
+                                    <CheckBox Content="Aktif öğrenci" IsChecked="{Binding IsActive}" VerticalAlignment="Center"/>
+                                </Border>
+                            </Grid>
+
+                            <TextBlock Text="Telefon" Foreground="{StaticResource TextMainBrush}"/>
+                            <TextBox Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}" MaxLength="30" AutomationProperties.Name="Telefon"/>
+
+                            <TextBlock Text="E-posta" Foreground="{StaticResource TextMainBrush}"/>
+                            <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" MaxLength="200" AutomationProperties.Name="E-posta"/>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Grid Grid.Row="2" Margin="0,16,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Formu temizle" Command="{Binding NewCommand}" Margin="0"/>
+                        <Button Grid.Column="2" Content="{Binding SaveLabel}" Command="{Binding SaveCommand}" Style="{StaticResource PrimaryButtonStyle}" Margin="0"/>
+                    </Grid>
+                </Grid>
             </Border>
         </Grid>
 

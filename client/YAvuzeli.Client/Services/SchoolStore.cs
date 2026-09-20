@@ -6,7 +6,16 @@ using YAvuzeli.Infrastructure.Data;
 
 namespace YAvuzeli.Client.Services;
 
-public sealed record TeacherRow(Guid Id, string FirstName, string LastName, string? Phone, string? Email, bool IsActive);
+public sealed record TeacherRow(
+    Guid Id,
+    string FirstName,
+    string LastName,
+    string? Phone,
+    string? Email,
+    string Branch,
+    bool IsActive);
+
+
 public sealed record CourseRow(Guid Id, string Title, string? Description, Guid? TeacherId, string TeacherName, bool IsActive);
 public sealed record PaymentRow(Guid Id, Guid StudentId, string StudentName, decimal Amount, DateTime PaymentDate, string PaymentMethod, string? Note);
 public sealed record AttendanceRow(Guid Id, Guid StudentId, string StudentName, Guid CourseId, string CourseTitle, DateTime AttendanceDate, bool IsPresent);
@@ -28,13 +37,14 @@ public sealed class SchoolStore
 
     public Task<List<TeacherRow>> GetTeachersAsync() => WithDbAsync(async db =>
         await db.Teachers.AsNoTracking().OrderBy(x => x.FirstName).ThenBy(x => x.LastName)
-            .Select(x => new TeacherRow(x.Id, x.FirstName, x.LastName, x.Phone, x.Email, x.IsActive)).ToListAsync());
+            .Select(x => new TeacherRow(x.Id, x.FirstName, x.LastName, x.Phone, x.Email, x.Branch, x.IsActive)).ToListAsync());
 
-    public Task<TeacherRow> SaveTeacherAsync(Guid? id, string firstName, string lastName, string? phone, string? email, bool isActive) =>
+    public Task<TeacherRow> SaveTeacherAsync(Guid? id, string firstName, string lastName, string? phone, string? email, string Branch, bool isActive) =>
         WithDbAsync(async db =>
         {
             firstName = Required(firstName, "Ad");
             lastName = Required(lastName, "Soyad");
+            Branch = Required(Branch, "Branş");
             Teacher teacher;
             if (id is { } existing)
             {
@@ -51,8 +61,10 @@ public sealed class SchoolStore
             teacher.Phone = BlankToNull(phone);
             teacher.Email = BlankToNull(email);
             teacher.IsActive = isActive;
+            teacher.Branch = Branch;
             await db.SaveChangesAsync();
-            return new TeacherRow(teacher.Id, teacher.FirstName, teacher.LastName, teacher.Phone, teacher.Email, teacher.IsActive);
+            return new TeacherRow(teacher.Id, teacher.FirstName, teacher.LastName, teacher.Phone, teacher.Email,
+                teacher.Branch, teacher.IsActive);
         });
 
     public Task DeleteTeacherAsync(Guid id) => WithDbAsync(async db =>
@@ -329,6 +341,8 @@ public sealed class SchoolStore
 
     private static async Task EnsureExtraSchemaAsync(AppDbContext db)
     {
+        await EnsureTeacherBranchColumnAsync(db);
+
         await db.Database.ExecuteSqlRawAsync("""
             CREATE TABLE IF NOT EXISTS "ScheduleItems" (
                 "Id" TEXT NOT NULL CONSTRAINT "PK_ScheduleItems" PRIMARY KEY,
@@ -345,6 +359,48 @@ public sealed class SchoolStore
             CREATE UNIQUE INDEX IF NOT EXISTS "IX_ScheduleItems_CourseId_DayOfWeek_StartTime"
             ON "ScheduleItems" ("CourseId", "DayOfWeek", "StartTime");
             """);
+    }
+
+    private static async Task EnsureTeacherBranchColumnAsync(AppDbContext db)
+    {
+        await db.Database.OpenConnectionAsync();
+        try
+        {
+            await using var check = db.Database.GetDbConnection().CreateCommand();
+            check.CommandText = "PRAGMA table_info(\"Teachers\");";
+            var hasBranch = false;
+            var hasOldBrance = false;
+            await using (var reader = await check.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (string.Equals(reader.GetString(1), "Branch", StringComparison.OrdinalIgnoreCase))
+                    {
+                        hasBranch = true;
+                    }
+                    else if (string.Equals(reader.GetString(1), "Brance", StringComparison.OrdinalIgnoreCase))
+                    {
+                        hasOldBrance = true;
+                    }
+                }
+            }
+
+            await using var update = db.Database.GetDbConnection().CreateCommand();
+            if (!hasBranch && hasOldBrance)
+            {
+                update.CommandText = "ALTER TABLE \"Teachers\" RENAME COLUMN \"Brance\" TO \"Branch\";";
+                await update.ExecuteNonQueryAsync();
+            }
+            else if (!hasBranch)
+            {
+                update.CommandText = "ALTER TABLE \"Teachers\" ADD COLUMN \"Branch\" TEXT NOT NULL DEFAULT '';";
+                await update.ExecuteNonQueryAsync();
+            }
+        }
+        finally
+        {
+            await db.Database.CloseConnectionAsync();
+        }
     }
 
     private static async Task<Dictionary<Guid, string>> StudentLookupMapAsync(AppDbContext db) =>

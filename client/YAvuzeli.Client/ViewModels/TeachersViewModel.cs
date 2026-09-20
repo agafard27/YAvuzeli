@@ -17,6 +17,7 @@ public sealed class TeachersViewModel : BaseViewModel
     public string LastName { get; set; } = "";
     public string Phone { get; set; } = "";
     public string Email { get; set; } = "";
+    public string Branch { get; set; } = "";
     public bool IsActive { get; set; } = true;
     public string Message { get => _message; set { _message = value; RaisePropertyChanged(); } }
     public bool IsReady => !_busy;
@@ -46,7 +47,7 @@ public sealed class TeachersViewModel : BaseViewModel
 
     private async Task SaveAsync() => await RunAsync(async () =>
     {
-        var saved = await _store.SaveTeacherAsync(_editingId, FirstName, LastName, Phone, Email, IsActive);
+        var saved = await _store.SaveTeacherAsync(_editingId, FirstName, LastName, Phone, Email, Branch, IsActive);
         Replace(Teachers, saved, x => x.Id == saved.Id);
         SelectedTeacher = saved;
         Populate(saved);
@@ -74,6 +75,7 @@ public sealed class TeachersViewModel : BaseViewModel
         LastName = teacher?.LastName ?? "";
         Phone = teacher?.Phone ?? "";
         Email = teacher?.Email ?? "";
+        Branch = teacher?.Branch ?? "";
         IsActive = teacher?.IsActive ?? true;
         RaiseAll();
     }
@@ -94,6 +96,7 @@ public sealed class TeachersViewModel : BaseViewModel
         RaisePropertyChanged(nameof(FirstName)); RaisePropertyChanged(nameof(LastName));
         RaisePropertyChanged(nameof(Phone)); RaisePropertyChanged(nameof(Email));
         RaisePropertyChanged(nameof(IsActive)); RaisePropertyChanged(nameof(SaveLabel));
+        RaisePropertyChanged(nameof(Branch));
     }
 
     private static void Replace<T>(ObservableCollection<T> list, T item, Func<T, bool> match)
