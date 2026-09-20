@@ -1,25 +1,32 @@
 <UserControl x:Class="YAvuzeli.Client.Views.DashboardView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Height="Auto" Width="Auto">
+             Language="tr-TR" FontFamily="Segoe UI">
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Dashboard" FontSize="20" FontWeight="Bold" Margin="6" />
-            <WrapPanel Margin="6">
-                <Border Background="#FFFBCC" Padding="12" Margin="6">
-                    <StackPanel>
-                        <TextBlock Text="Gelir" FontWeight="Bold"/>
-                        <TextBlock Text="₺0" FontSize="16"/>
-                    </StackPanel>
-                </Border>
-                <Border Background="#CCFFCC" Padding="12" Margin="6">
-                    <StackPanel>
-                        <TextBlock Text="Yoklama" FontWeight="Bold"/>
-                        <TextBlock Text="%0" FontSize="16"/>
-                    </StackPanel>
-                </Border>
-            </WrapPanel>
-            <TextBlock Margin="6" Text="Hızlı Erişim" FontWeight="Bold"/>
-        </StackPanel>
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+        <UniformGrid Columns="5" Margin="0,0,0,18">
+            <Border Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="18" Margin="0,0,12,0">
+                <StackPanel><TextBlock Text="Öğrenci" Foreground="#64748B"/><TextBlock Text="{Binding StudentsText}" FontSize="28" FontWeight="SemiBold"/></StackPanel>
+            </Border>
+            <Border Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="18" Margin="0,0,12,0">
+                <StackPanel><TextBlock Text="Öğretmen" Foreground="#64748B"/><TextBlock Text="{Binding TeachersText}" FontSize="28" FontWeight="SemiBold"/></StackPanel>
+            </Border>
+            <Border Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="18" Margin="0,0,12,0">
+                <StackPanel><TextBlock Text="Ders" Foreground="#64748B"/><TextBlock Text="{Binding CoursesText}" FontSize="28" FontWeight="SemiBold"/></StackPanel>
+            </Border>
+            <Border Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="18" Margin="0,0,12,0">
+                <StackPanel><TextBlock Text="Tahsilat" Foreground="#64748B"/><TextBlock Text="{Binding RevenueText}" FontSize="28" FontWeight="SemiBold" Foreground="#166534"/></StackPanel>
+            </Border>
+            <Border Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="18">
+                <StackPanel><TextBlock Text="Yoklama" Foreground="#64748B"/><TextBlock Text="{Binding AttendanceText}" FontSize="28" FontWeight="SemiBold" Foreground="#225CB5"/></StackPanel>
+            </Border>
+        </UniformGrid>
+        <Border Grid.Row="1" Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="22">
+            <StackPanel>
+                <TextBlock Text="Hızlı kullanım" FontSize="20" FontWeight="SemiBold"/>
+                <TextBlock Text="Önce öğrenci ve öğretmen kayıtlarını girin. Ardından dersleri öğretmene bağlayıp ödeme ve yoklama kayıtlarını oluşturun." TextWrapping="Wrap" Foreground="#64748B" Margin="0,8,0,18"/>
+                <TextBlock Text="{Binding Message}" Foreground="#8A351B"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </UserControl>

@@ -61,3 +61,7 @@ C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\obj\Debug\net8.0
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\bin\Debug\net8.0\appsettings.json
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\bin\Debug\net8.0\Npgsql.dll
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\bin\Debug\net8.0\YAvuzeli.Shared.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\bin\Debug\net8.0\YAvuzeli.Shared.pdb
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.API\obj\Debug\net8.0\YAvuzeli.API.sourcelink.json

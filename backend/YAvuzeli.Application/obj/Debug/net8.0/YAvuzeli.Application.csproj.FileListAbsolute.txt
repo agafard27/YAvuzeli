@@ -13,3 +13,6 @@ C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\obj\Debu
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\obj\Debug\net8.0\refint\YAvuzeli.Application.dll
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\obj\Debug\net8.0\YAvuzeli.Application.pdb
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\obj\Debug\net8.0\ref\YAvuzeli.Application.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\bin\Debug\net8.0\YAvuzeli.Shared.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\bin\Debug\net8.0\YAvuzeli.Shared.pdb
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Application\obj\Debug\net8.0\YAvuzeli.Application.sourcelink.json

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using YAvuzeli.Application.DTOs;
+using YAvuzeli.Shared.Students;
 using YAvuzeli.Application.Services;
 
 namespace YAvuzeli.API.Controllers;
@@ -30,18 +30,16 @@ public class StudentsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<StudentDto>> Create([FromBody] StudentDto input)
+    public async Task<ActionResult<StudentDto>> Create([FromBody] StudentInput input)
     {
         var created = await _studentService.CreateAsync(input);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
 
     [HttpPut("{id:guid}")]
-    public async Task<ActionResult<StudentDto>> Update(Guid id, [FromBody] StudentDto input)
+    public async Task<ActionResult<StudentDto>> Update(Guid id, [FromBody] StudentInput input)
     {
-        if (id != input.Id) return BadRequest();
-
-        var updated = await _studentService.UpdateAsync(input);
+        var updated = await _studentService.UpdateAsync(id, input);
         return Ok(updated);
     }
 

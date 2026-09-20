@@ -11,6 +11,38 @@
         "runtime": {
           "bin/placeholder/YAvuzeli.Domain.dll": {}
         }
+      },
+      "YAvuzeli.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YAvuzeli.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAvuzeli.Shared.dll": {}
+        }
+      }
+    },
+    "net8.0/win-x64": {
+      "YAvuzeli.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YAvuzeli.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAvuzeli.Domain.dll": {}
+        }
+      },
+      "YAvuzeli.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YAvuzeli.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAvuzeli.Shared.dll": {}
+        }
       }
     }
   },
@@ -19,16 +51,21 @@
       "type": "project",
       "path": "../YAvuzeli.Domain/YAvuzeli.Domain.csproj",
       "msbuildProject": "../YAvuzeli.Domain/YAvuzeli.Domain.csproj"
+    },
+    "YAvuzeli.Shared/1.0.0": {
+      "type": "project",
+      "path": "../YAvuzeli.Shared/YAvuzeli.Shared.csproj",
+      "msbuildProject": "../YAvuzeli.Shared/YAvuzeli.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "YAvuzeli.Domain >= 1.0.0"
+      "YAvuzeli.Domain >= 1.0.0",
+      "YAvuzeli.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\agafard\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\agafard\\Documents\\Codex\\2026-09-17\\pcde-c-users-agafard-desktop-projeler\\work\\nuget-cache": {}
   },
   "project": {
     "version": "1.0.0",
@@ -36,21 +73,17 @@
       "projectUniqueName": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Application\\YAvuzeli.Application.csproj",
       "projectName": "YAvuzeli.Application",
       "projectPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Application\\YAvuzeli.Application.csproj",
-      "packagesPath": "C:\\Users\\agafard\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\agafard\\Documents\\Codex\\2026-09-17\\pcde-c-users-agafard-desktop-projeler\\work\\nuget-cache",
       "outputPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\agafard\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+        "C:\\Users\\agafard\\Documents\\Codex\\2026-09-17\\pcde-c-users-agafard-desktop-projeler\\work\\review-nuget.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Users\\agafard\\.nuget\\packages": {}
       },
       "frameworks": {
         "net8.0": {
@@ -58,6 +91,9 @@
           "projectReferences": {
             "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Domain\\YAvuzeli.Domain.csproj": {
               "projectPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Domain\\YAvuzeli.Domain.csproj"
+            },
+            "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj": {
+              "projectPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj"
             }
           }
         }
@@ -93,6 +129,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

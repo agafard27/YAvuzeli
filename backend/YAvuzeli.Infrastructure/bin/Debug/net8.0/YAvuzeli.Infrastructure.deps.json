@@ -724,7 +724,8 @@
       "System.Threading.Channels/6.0.0": {},
       "YAvuzeli.Application/1.0.0": {
         "dependencies": {
-          "YAvuzeli.Domain": "1.0.0"
+          "YAvuzeli.Domain": "1.0.0",
+          "YAvuzeli.Shared": "1.0.0"
         },
         "runtime": {
           "YAvuzeli.Application.dll": {
@@ -736,6 +737,14 @@
       "YAvuzeli.Domain/1.0.0": {
         "runtime": {
           "YAvuzeli.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "YAvuzeli.Shared/1.0.0": {
+        "runtime": {
+          "YAvuzeli.Shared.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1091,6 +1100,11 @@
       "sha512": ""
     },
     "YAvuzeli.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YAvuzeli.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

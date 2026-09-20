@@ -6,5 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\YAvuzeli.Domain\YAvuzeli.Domain.csproj" />
+    <ProjectReference Include="..\YAvuzeli.Shared\YAvuzeli.Shared.csproj" />
   </ItemGroup>
 </Project>

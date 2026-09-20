@@ -2,8 +2,14 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetPlatformMoniker>Windows,Version=7.0</TargetPlatformMoniker>
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\backend\YAvuzeli.Shared\YAvuzeli.Shared.csproj" />
+    <ProjectReference Include="..\..\backend\YAvuzeli.Application\YAvuzeli.Application.csproj" />
+    <ProjectReference Include="..\..\backend\YAvuzeli.Infrastructure\YAvuzeli.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>

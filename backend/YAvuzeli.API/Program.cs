@@ -6,22 +6,38 @@ using YAvuzeli.Infrastructure.Data;
 using YAvuzeli.Application.Repositories;
 using YAvuzeli.Application.Services;
 using YAvuzeli.Infrastructure.Repositories;
+using YAvuzeli.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure DbContext using connection string from appsettings
-var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+var provider = builder.Configuration["Database:Provider"] ?? "PostgreSQL";
+var useSqlite = provider.Equals("Sqlite", StringComparison.OrdinalIgnoreCase);
+if (!useSqlite && !provider.Equals("PostgreSQL", StringComparison.OrdinalIgnoreCase))
+    throw new InvalidOperationException("Database:Provider must be Sqlite or PostgreSQL.");
+var conn = builder.Configuration.GetConnectionString(useSqlite ? "SqliteConnection" : "DefaultConnection")
+    ?? throw new InvalidOperationException("Veritabanı bağlantı ayarı bulunamadı.");
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-	options.UseNpgsql(conn);
+    if (useSqlite) options.UseSqlite(conn);
+    else options.UseNpgsql(conn);
 });
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 
 builder.Services.AddControllers();
+builder.Services.AddProblemDetails();
+builder.Services.AddExceptionHandler<ApiExceptionHandler>();
 
 var app = builder.Build();
+// Only the disposable/local SQLite setup is auto-created. PostgreSQL uses migrations.
+if (useSqlite && app.Environment.IsDevelopment())
+{
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await db.Database.EnsureCreatedAsync();
+}
+app.UseExceptionHandler();
 app.MapControllers();
 app.MapGet("/", () => Results.Ok(new { status = "YAvuzeli API is running" }));
 

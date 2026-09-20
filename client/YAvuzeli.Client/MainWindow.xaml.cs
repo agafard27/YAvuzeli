@@ -8,5 +8,8 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         DataContext = new ViewModels.MainViewModel();
+        Closing += (_, args) => args.Cancel = !((ViewModels.MainViewModel)DataContext).CanClose();
     }
+
+    private void Exit_Click(object sender, RoutedEventArgs e) => Close();
 }

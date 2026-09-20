@@ -17,3 +17,6 @@ C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\obj\D
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\obj\Debug\net8.0\ref\YAvuzeli.Infrastructure.dll
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\bin\Debug\net8.0\YAvuzeli.Infrastructure.runtimeconfig.json
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\obj\Debug\net8.0\YAvuzeli.Infrastructure.genruntimeconfig.cache
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\bin\Debug\net8.0\YAvuzeli.Shared.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\bin\Debug\net8.0\YAvuzeli.Shared.pdb
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Infrastructure\obj\Debug\net8.0\YAvuzeli.Infrastructure.sourcelink.json

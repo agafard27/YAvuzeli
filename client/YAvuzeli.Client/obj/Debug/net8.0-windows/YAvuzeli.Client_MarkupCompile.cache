@@ -1,5 +1,5 @@
 ﻿YAvuzeli.Client
-
+1.0.0.0
 
 winexe
 C#
@@ -8,12 +8,12 @@ C:\Users\agafard\Desktop\Projeler\YAvuzeli\client\YAvuzeli.Client\obj\Debug\net8
 YAvuzeli.Client
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\client\YAvuzeli.Client\App.xaml
 111550084597
 
-161905248490
-1981124507420
+281025733461
+22212975399
 MainWindow.xaml;Views\AttendanceView.xaml;Views\CoursesView.xaml;Views\DashboardView.xaml;Views\PaymentsView.xaml;Views\ReportsView.xaml;Views\ScheduleView.xaml;Views\SettingsView.xaml;Views\StudentDetailView.xaml;Views\StudentsView.xaml;Views\TeachersView.xaml;
 
 False

@@ -1,30 +1,92 @@
 <Window x:Class="YAvuzeli.Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="YAvuzeli - Demo" Height="600" Width="1000">
-    <DockPanel>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="Dosya">
-                <MenuItem Header="Çıkış"/>
-            </MenuItem>
-            <MenuItem Header="Görünüm">
-                <MenuItem Header="Dashboard" Command="{x:Static ApplicationCommands.Open}"/>
-            </MenuItem>
-        </Menu>
+        Title="YAvuzeli - Dershane Otomasyonu"
+        Height="780" Width="1220" MinWidth="1080" MinHeight="660"
+        Background="#EEF2F7"
+        FontFamily="Segoe UI">
+    <Window.Resources>
+        <Style x:Key="NavButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#D7E2F1"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="16,10"/>
+            <Setter Property="Margin" Value="10,2"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#243B63"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="#2E4A78"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
-        <StackPanel DockPanel.Dock="Left" Width="180" Background="#EEE">
-            <TextBlock Margin="10" FontWeight="Bold">Menü</TextBlock>
-            <Button Margin="6" Command="{Binding ShowDashboardCommand}">Dashboard</Button>
-            <Button Margin="6" Command="{Binding ShowStudentsCommand}">Öğrenciler</Button>
-            <Button Margin="6" Command="{Binding ShowTeachersCommand}">Öğretmenler</Button>
-            <Button Margin="6" Command="{Binding ShowCoursesCommand}">Dersler</Button>
-            <Button Margin="6" Command="{Binding ShowScheduleCommand}">Program</Button>
-            <Button Margin="6" Command="{Binding ShowAttendanceCommand}">Yoklama</Button>
-            <Button Margin="6" Command="{Binding ShowPaymentsCommand}">Ödemeler</Button>
-            <Button Margin="6" Command="{Binding ShowReportsCommand}">Raporlar</Button>
-            <Button Margin="6" Command="{Binding ShowSettingsCommand}">Ayarlar</Button>
-        </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <ContentControl Content="{Binding CurrentView}" Margin="10"/>
-    </DockPanel>
+        <Border Grid.Column="0" Background="#16233A">
+            <DockPanel LastChildFill="True">
+                <StackPanel DockPanel.Dock="Top" Margin="18,22,18,20">
+                    <TextBlock Text="YAvuzeli" Foreground="White" FontSize="25" FontWeight="SemiBold"/>
+                    <TextBlock Text="Dershane otomasyonu" Foreground="#91A4C2" Margin="0,4,0,0"/>
+                </StackPanel>
+
+                <Button DockPanel.Dock="Bottom" Style="{StaticResource NavButtonStyle}" Margin="10,0,10,18"
+                        Command="{Binding ShowSettingsCommand}" Content="Ayarlar"/>
+
+                <StackPanel>
+                    <TextBlock Text="MODULLER" Foreground="#7890B2" FontSize="11" FontWeight="SemiBold" Margin="26,0,0,8"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowDashboardCommand}" Content="Dashboard"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowStudentsCommand}" Content="Öğrenciler"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowTeachersCommand}" Content="Öğretmenler"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowCoursesCommand}" Content="Dersler"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowScheduleCommand}" Content="Program"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowAttendanceCommand}" Content="Yoklama"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowPaymentsCommand}" Content="Ödemeler"/>
+                    <Button Style="{StaticResource NavButtonStyle}" Command="{Binding ShowReportsCommand}" Content="Raporlar"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="92"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Background="White" BorderBrush="#DDE5EF" BorderThickness="0,0,0,1">
+                <Grid Margin="28,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="{Binding PageTitle}" FontSize="24" FontWeight="SemiBold" Foreground="#16233A"/>
+                        <TextBlock Text="{Binding PageSubtitle}" Foreground="#65748A" Margin="0,4,0,0"/>
+                    </StackPanel>
+                    <Button Content="Çıkış" Click="Exit_Click" HorizontalAlignment="Right" VerticalAlignment="Center"
+                            Padding="16,8" Background="#F3F6FA" BorderBrush="#CFD8E5" Foreground="#28364D"/>
+                </Grid>
+            </Border>
+
+            <ContentControl Grid.Row="1" Content="{Binding CurrentView}" Margin="24"/>
+        </Grid>
+    </Grid>
 </Window>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YAvuzeli.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e25adf22af4032a970a362b88af18841800a96e")]
 [assembly: System.Reflection.AssemblyProductAttribute("YAvuzeli.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YAvuzeli.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

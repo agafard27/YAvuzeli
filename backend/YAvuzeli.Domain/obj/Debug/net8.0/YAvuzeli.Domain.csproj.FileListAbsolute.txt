@@ -9,3 +9,4 @@ C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\refint\YAvuzeli.Domain.dll
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.pdb
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\ref\YAvuzeli.Domain.dll
+C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.sourcelink.json

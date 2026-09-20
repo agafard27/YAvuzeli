@@ -1,4 +1,5 @@
-using YAvuzeli.Application.DTOs;
+using System.ComponentModel.DataAnnotations;
+using YAvuzeli.Shared.Students;
 using YAvuzeli.Application.Repositories;
 using YAvuzeli.Application.Services;
 using YAvuzeli.Domain.Entities;
@@ -28,34 +29,34 @@ public class StudentService : IStudentService
         return students.Select(MapToDto);
     }
 
-    public async Task<StudentDto> CreateAsync(StudentDto input)
+    public async Task<StudentDto> CreateAsync(StudentInput input)
     {
+        Validator.ValidateObject(input, new ValidationContext(input), true);
         var student = new Student
         {
-            Id = input.Id,
-            FirstName = input.FirstName,
-            LastName = input.LastName,
-            Phone = input.Phone,
-            Email = input.Email,
-            DateOfBirth = input.DateOfBirth,
-            IsActive = input.IsActive,
-            CreatedAt = input.CreatedAt
+            FirstName = input.FirstName.Trim(),
+            LastName = input.LastName.Trim(),
+            Phone = NormalizeOptional(input.Phone),
+            Email = NormalizeOptional(input.Email),
+            DateOfBirth = input.DateOfBirth!.Value.ToDateTime(TimeOnly.MinValue),
+            IsActive = input.IsActive
         };
 
         var created = await _repository.AddAsync(student);
         return MapToDto(created);
     }
 
-    public async Task<StudentDto> UpdateAsync(StudentDto input)
+    public async Task<StudentDto> UpdateAsync(Guid id, StudentInput input)
     {
-        var existing = await _repository.GetByIdAsync(input.Id)
-            ?? throw new KeyNotFoundException($"Student {input.Id} not found");
+        Validator.ValidateObject(input, new ValidationContext(input), true);
+        var existing = await _repository.GetByIdAsync(id)
+            ?? throw new KeyNotFoundException($"Student {id} not found");
 
-        existing.FirstName = input.FirstName;
-        existing.LastName = input.LastName;
-        existing.Phone = input.Phone;
-        existing.Email = input.Email;
-        existing.DateOfBirth = input.DateOfBirth;
+        existing.FirstName = input.FirstName.Trim();
+        existing.LastName = input.LastName.Trim();
+        existing.Phone = NormalizeOptional(input.Phone);
+        existing.Email = NormalizeOptional(input.Email);
+        existing.DateOfBirth = input.DateOfBirth!.Value.ToDateTime(TimeOnly.MinValue);
         existing.IsActive = input.IsActive;
 
         var updated = await _repository.UpdateAsync(existing);
@@ -75,8 +76,11 @@ public class StudentService : IStudentService
             student.LastName,
             student.Email,
             student.Phone,
-            student.DateOfBirth,
+            DateOnly.FromDateTime(student.DateOfBirth),
             student.IsActive,
             student.CreatedAt);
     }
+
+    private static string? NormalizeOptional(string? value) =>
+        string.IsNullOrWhiteSpace(value) ? null : value.Trim();
 }

@@ -1,13 +1,54 @@
 <UserControl x:Class="YAvuzeli.Client.Views.CoursesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Language="tr-TR" FontFamily="Segoe UI">
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Dersler" FontSize="18" FontWeight="Bold" Margin="6"/>
-            <Button Content="Yeni Ders" Margin="6" Width="120"/>
-            <ListView Margin="6">
-                <ListViewItem>Ders 1</ListViewItem>
-            </ListView>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="22"/>
+                <ColumnDefinition Width="340"/>
+            </Grid.ColumnDefinitions>
+            <Border Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="18">
+                <Grid>
+                    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
+                        <Button Content="Yenile" Command="{Binding RefreshCommand}" Padding="13,8" Margin="0,0,8,0"/>
+                        <Button Content="Düzenle" Command="{Binding EditCommand}" Padding="13,8" Margin="0,0,8,0"/>
+                        <Button Content="Sil" Command="{Binding DeleteCommand}" Padding="13,8" Foreground="#B42318"/>
+                    </StackPanel>
+                    <DataGrid Grid.Row="1" ItemsSource="{Binding Courses}" SelectedItem="{Binding SelectedCourse}" AutoGenerateColumns="False"
+                              IsReadOnly="True" CanUserAddRows="False" RowHeight="36" AlternatingRowBackground="#F8FAFC">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Ders" Binding="{Binding Title}" Width="*"/>
+                            <DataGridTextColumn Header="Öğretmen" Binding="{Binding TeacherName}" Width="170"/>
+                            <DataGridTextColumn Header="Açıklama" Binding="{Binding Description}" Width="220"/>
+                            <DataGridCheckBoxColumn Header="Aktif" Binding="{Binding IsActive}" Width="60"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+            <Border Grid.Column="2" Background="White" CornerRadius="8" BorderBrush="#DDE5EF" BorderThickness="1" Padding="20">
+                <StackPanel IsEnabled="{Binding IsReady}">
+                    <TextBlock Text="Ders kaydı" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="Ders adı *" Margin="0,18,0,4"/>
+                    <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" Padding="8"/>
+                    <TextBlock Text="Öğretmen" Margin="0,12,0,4"/>
+                    <ComboBox ItemsSource="{Binding Teachers}" SelectedValue="{Binding TeacherId}" SelectedValuePath="Id" DisplayMemberPath="Name" Padding="6"/>
+                    <TextBlock Text="Açıklama" Margin="0,12,0,4"/>
+                    <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Padding="8" Height="90" TextWrapping="Wrap" AcceptsReturn="True"/>
+                    <CheckBox Content="Aktif ders" IsChecked="{Binding IsActive}" Margin="0,16,0,18"/>
+                    <Button Content="{Binding SaveLabel}" Command="{Binding SaveCommand}" Background="#225CB5" Foreground="White" Padding="13,9"/>
+                    <Button Content="Yeni / Formu temizle" Command="{Binding NewCommand}" Margin="0,10,0,0" Padding="13,9"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Border Grid.Row="1" Background="#FFF7ED" BorderBrush="#FED7AA" BorderThickness="1" CornerRadius="6" Padding="12" Margin="0,14,0,0">
+            <TextBlock Text="{Binding Message}" Foreground="#8A351B"/>
+        </Border>
     </Grid>
 </UserControl>

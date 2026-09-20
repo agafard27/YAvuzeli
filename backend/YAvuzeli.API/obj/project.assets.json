@@ -522,7 +522,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "YAvuzeli.Domain": "1.0.0"
+          "YAvuzeli.Domain": "1.0.0",
+          "YAvuzeli.Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/YAvuzeli.Application.dll": {}
@@ -556,6 +557,16 @@
         },
         "runtime": {
           "bin/placeholder/YAvuzeli.Infrastructure.dll": {}
+        }
+      },
+      "YAvuzeli.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YAvuzeli.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YAvuzeli.Shared.dll": {}
         }
       }
     }
@@ -1306,12 +1317,18 @@
       "type": "project",
       "path": "../YAvuzeli.Infrastructure/YAvuzeli.Infrastructure.csproj",
       "msbuildProject": "../YAvuzeli.Infrastructure/YAvuzeli.Infrastructure.csproj"
+    },
+    "YAvuzeli.Shared/1.0.0": {
+      "type": "project",
+      "path": "../YAvuzeli.Shared/YAvuzeli.Shared.csproj",
+      "msbuildProject": "../YAvuzeli.Shared/YAvuzeli.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "YAvuzeli.Application >= 1.0.0",
-      "YAvuzeli.Infrastructure >= 1.0.0"
+      "YAvuzeli.Infrastructure >= 1.0.0",
+      "YAvuzeli.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1332,12 +1349,14 @@
       ],
       "configFilePaths": [
         "C:\\Users\\agafard\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1349,6 +1368,9 @@
             },
             "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Infrastructure\\YAvuzeli.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Infrastructure\\YAvuzeli.Infrastructure.csproj"
+            },
+            "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj": {
+              "projectPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj"
             }
           }
         }

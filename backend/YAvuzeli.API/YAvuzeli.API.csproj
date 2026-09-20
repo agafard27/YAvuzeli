@@ -7,5 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\YAvuzeli.Infrastructure\YAvuzeli.Infrastructure.csproj" />
     <ProjectReference Include="..\YAvuzeli.Application\YAvuzeli.Application.csproj" />
+    <ProjectReference Include="..\YAvuzeli.Shared\YAvuzeli.Shared.csproj" />
   </ItemGroup>
 </Project>
