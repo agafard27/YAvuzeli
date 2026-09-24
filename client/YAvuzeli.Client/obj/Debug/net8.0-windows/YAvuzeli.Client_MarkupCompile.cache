@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\agafard\Desktop\Projeler\YAvuzeli\client\YAvuzeli.Client\obj\Debug\net8.0-windows\
+C:\Users\agafard\source\repos\YAvuzeli\client\YAvuzeli.Client\obj\Debug\net8.0-windows\
 YAvuzeli.Client
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\agafard\Desktop\Projeler\YAvuzeli\client\YAvuzeli.Client\App.xaml
+C:\Users\agafard\source\repos\YAvuzeli\client\YAvuzeli.Client\App.xaml
 111550084597
 
 28-246980415
-222-2020305618
+222-1473045404
 MainWindow.xaml;Views\AttendanceView.xaml;Views\CoursesView.xaml;Views\DashboardView.xaml;Views\PaymentsView.xaml;Views\ReportsView.xaml;Views\ScheduleView.xaml;Views\SettingsView.xaml;Views\StudentDetailView.xaml;Views\StudentsView.xaml;Views\TeachersView.xaml;
 
 False

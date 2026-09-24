@@ -29,6 +29,10 @@ builder.Services.AddControllers();
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<ApiExceptionHandler>();
 
+// Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 // Only the disposable/local SQLite setup is auto-created. PostgreSQL uses migrations.
 if (useSqlite && app.Environment.IsDevelopment())
@@ -38,6 +42,9 @@ if (useSqlite && app.Environment.IsDevelopment())
     await db.Database.EnsureCreatedAsync();
 }
 app.UseExceptionHandler();
+app.UseSwagger();
+app.UseSwaggerUI();
+
 app.MapControllers();
 app.MapGet("/", () => Results.Ok(new { status = "YAvuzeli API is running" }));
 

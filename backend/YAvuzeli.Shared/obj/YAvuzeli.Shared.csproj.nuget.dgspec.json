@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj": {}
+    "C:\\Users\\agafard\\source\\repos\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj": {
+    "C:\\Users\\agafard\\source\\repos\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\agafard\\source\\repos\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj",
         "projectName": "YAvuzeli.Shared",
-        "projectPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj",
+        "projectPath": "C:\\Users\\agafard\\source\\repos\\YAvuzeli\\backend\\YAvuzeli.Shared\\YAvuzeli.Shared.csproj",
         "packagesPath": "C:\\Users\\agafard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\backend\\YAvuzeli.Shared\\obj\\",
+        "outputPath": "C:\\Users\\agafard\\source\\repos\\YAvuzeli\\backend\\YAvuzeli.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -47,6 +48,7 @@
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "imports": [
             "net461",

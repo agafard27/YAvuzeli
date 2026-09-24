@@ -9,4 +9,7 @@
     <ProjectReference Include="..\YAvuzeli.Application\YAvuzeli.Application.csproj" />
     <ProjectReference Include="..\YAvuzeli.Shared\YAvuzeli.Shared.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+  </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sglSXAjw5es=",
+  "dgSpecHash": "eYNbhn6WDx0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\agafard\\Desktop\\Projeler\\YAvuzeli\\client\\YAvuzeli.Client\\YAvuzeli.Client.csproj",
+  "projectFilePath": "C:\\Users\\agafard\\source\\repos\\YAvuzeli\\client\\YAvuzeli.Client\\YAvuzeli.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agafard\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.8\\microsoft.data.sqlite.core.8.0.8.nupkg.sha512",
     "C:\\Users\\agafard\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",

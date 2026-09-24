@@ -10,3 +10,16 @@ C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.pdb
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\ref\YAvuzeli.Domain.dll
 C:\Users\agafard\Desktop\Projeler\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.sourcelink.json
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\bin\Debug\net8.0\YAvuzeli.Domain.deps.json
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\bin\Debug\net8.0\YAvuzeli.Domain.dll
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\bin\Debug\net8.0\YAvuzeli.Domain.pdb
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.AssemblyInfoInputs.cache
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.AssemblyInfo.cs
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.csproj.CoreCompileInputs.cache
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.sourcelink.json
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.dll
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\refint\YAvuzeli.Domain.dll
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.Domain.pdb
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\ref\YAvuzeli.Domain.dll
+C:\Users\agafard\source\repos\YAvuzeli\backend\YAvuzeli.Domain\obj\Debug\net8.0\YAvuzeli.C3EEC78F.Up2Date
